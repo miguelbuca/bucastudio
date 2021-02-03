@@ -301,9 +301,7 @@ if(localStorage.recentProjectPath != null){
     form.OpenProject(recentProjectPath.split('|')[recentProjectPath.split('|').length-2]);
 }
 
-
-OpenProject.addEventListener('click',function(){
-
+function OpenProjectNow() {
     var pathP = form.GetProjectFolderPath();
 
     if(localStorage.recentProjectPath != null){
@@ -315,7 +313,8 @@ OpenProject.addEventListener('click',function(){
     db.CollectionInsert('RecentFile',{Name: pathP.split('\\')[pathP.split('\\').length-1],path: pathP});
     form.OpenProject(pathP);
     ProjectActiveFileLoad(pathP);
-});
+}
+
 
 function Interlicence(tags) {
     tags.forEach(element => {
