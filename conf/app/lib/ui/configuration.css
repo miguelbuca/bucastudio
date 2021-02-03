@@ -1,0 +1,70 @@
+@import './base.css';
+:root{
+    --blue-color : #006594;
+    --white-color : #fff;
+    --black-color : #000;
+}
+.container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container>header{
+    padding: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-bottom: solid rgba(0, 0, 0, .1) 0.5px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.container>header>div:first-child{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.container>header>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    color: var(--blue-color);
+}
+.container>header>div .h-btn{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right:14px;
+}
+.container>header>div .h-btn:last-child{
+    margin-right:0;
+}
+.close-form{
+    background: black;
+}
+.max-form{
+    background: white;
+}
+.min-form{
+    background: #006594;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+main>section{
+    padding: 15px 30px;
+}
+main>section>h1{
+    font-size: 11pt;
+}
+main>section>div{
+    padding-top: 15px;
+}

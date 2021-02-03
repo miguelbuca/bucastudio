@@ -1,0 +1,44 @@
+:root{
+    --blue-color : #006594;
+    --white-color : #fff;
+    --black-color : #000;
+}
+input{
+    padding: 15px 30px;
+    color: var(--white-color);
+    background: rgba(0, 0, 0, .04);
+    border: none;
+    border: 100px;
+}
+select{
+    padding: 15px 30px;
+    color: var(--white-color);
+    background: rgba(0, 0, 0, .04);
+    border: none;
+    border: 100px;
+}
+select option{
+    padding: 14px 0;
+    color: var(--black-color);
+}
+select optgroup{
+    color: var(--black-color);
+}
+.btn-rd-100{
+    padding: 15px 30px;
+    border: none;
+    background-image: linear-gradient(to left top,var(--blue-color),#434343);
+    border-radius: 100px;
+    color: var(--white-color);
+}
+fieldset{
+    border: none;
+    padding: 8px 0;
+    border: solid rgba(0, 0, 0, .1) 0.5px;
+    display: flex;
+    flex-direction: column;
+}
+input[type="color"]{
+    margin: 4px 2px;
+    padding: 0;
+}

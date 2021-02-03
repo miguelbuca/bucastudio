@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/ui/home.css">
+    <link rel="stylesheet" href="code/page.css">
+    <script src="./code/page.js"></script>
+</head>
+<body>
+    <section class="container">
+        <header>
+            <div>
+                <img src="../lib/ui/src/logo.png" alt="BucaStudio">
+                <strong><label>BUCA</label><label>STUDIO</label></strong>
+            </div>
+            <div>
+                <div>
+                    <span class="maction" onmouseover="MenuDownOpen(this,'open')" onmouseout="MenuDownOpen(this,'close')">Arquivo
+                        <div>
+                            <ul>
+                                <li><span>Novo Arquivo</span><span>Ctrl+N</span></li>
+                                <li><span>Nova Janela</span></li>
+                            </ul>
+                            <ul>
+                                <li><span>Abrir Arquivo</span></li>
+                                <li><span>Abrir Pasta</span></li>
+                                <li onmouseover="MenuDownOpenChild(this,'open')" onmouseout="MenuDownOpenChild(this,'close')">
+                                    <span>Projectos Recentes</span><span><img src="../lib/ui/src/chevron.png" alt=""></span>
+                                    
+                                    <div class="f1">
+                                        <ul id="recFiles"></ul>
+                                    </div>
+                                
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><span>Salvar Automáticamente</span></li>
+                            </ul>
+                            <ul>
+                                <li><span>Salvar</span></li>
+                                <li><span>Salvar Como</span></li>
+                                <li><span>Salvar Todos</span></li>
+                            </ul>
+                            <ul>
+                                <li><span>Fechar Editor</span></li>
+                                <li><span>Fechar Pasta</span></li>
+                                <li><span>Fechar Janela</span></li>
+                            </ul>
+                            <ul>
+                                <li><span>Sair</span></li>
+                            </ul>
+                        </div>
+                    </span>
+                    <span class="maction" onmouseover="MenuDownOpen(this,'open')" onmouseout="MenuDownOpen(this,'close')">Editar
+                            <div>
+                                <ul>
+                                    <li><span>Desfazer</span><span>Ctrl+Z</span></li>
+                                    <li><span>Fazer Novamente</span><span>Ctrl+Y</span></li>
+                                </ul>
+                                <ul>
+                                    <li><span>Cortar</span><span>Ctrl+X</span></li>
+                                    <li id="btn_copy"><span>Copiar</span><span>Ctrl+C</span></li>
+                                    <li><span>Colar</span><span>Ctrl+V</span></li>
+                                </ul>
+                                <ul>
+                                    <li><span>Encontrar</span><span>Ctrl+F</span></li>
+                                    <li><span>Subistituir</span><span>Ctrl+H</span></li>
+                                </ul>
+                               <ul>
+                                    <li><span>Comentar linha</span></li>
+                                </ul>
+                            </div>
+                        </span>
+                    <span class="maction" onmouseover="MenuDownOpen(this,'open')" onmouseout="MenuDownOpen(this,'close')">Visualizar
+                            <div>
+                                <ul>
+                                    <li><span>Pré Visualização</span><span></span></li>
+                                    <li><span>Propriedades</span><span></span></li>
+                                </ul>
+                                <ul>
+                                    <li><span>Linha de Comando</span><span></span></li>
+                                    <li><span>Saída</span><span>Ctrl+Shift+S</span></li>
+                                </ul>
+                                <ul>
+                                    <li id="m_full_screan"><span>Usar Tela Cheia</span><span></span>
+                                    </li>
+                                </ul>
+                            </div>
+                    </span>
+                </div>
+                <div>
+                        <span class="maction"  id="m-android-conf" path='configuration.html'><img src="../lib/ui/src/ic_settings.png">Configurações</span>    
+                    <span class="maction" id="buildApk"><img src="../lib/ui/src/ic_build.png"> Executar</span>
+                    <span path='application.html' class="maction"  id="m-android-settings">Aplicação</span>
+                    <span class="maction" onmouseover="MenuDownOpen(this,'open')" onmouseout="MenuDownOpen(this,'close')"><img src="../lib/ui/src/ic_android.png">Android
+                        <div>
+                            <ul>
+                                <li onmouseover="MenuDownOpenChild(this,'open')" onmouseout="MenuDownOpenChild(this,'close')">
+                                <span>Executar emulador</span><span><img src="../lib/ui/src/chevron.png" alt=""></span>
+                                <div class="sbsmenu">
+                                    <ul id="android_emulator"></ul>
+                                </div>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li id="SDK_Manager"><span>SDK Manager</span><span></span></li>
+                                <li id="AVD_Manager"><span>AVD Manager</span><span></span></li>
+                            </ul>
+                        </div>
+                </span>
+                    <span class="maction" onmouseover="MenuDownOpen(this,'open')" onmouseout="MenuDownOpen(this,'close')">Ajuda
+                        <div>
+                            <ul>
+                                <li><span>Documentário</span><span></span></li>
+                            </ul>
+                            <ul>
+                                <strong class="sm-title-cat">Junta-se a nós</strong>
+                                <li><span>Instagram</span><span></span></li>
+                                <li><span>Twiter</span><span></span></li>
+                            </ul>
+                            <ul>
+                                <li><span>Licença</span><span></span></li>
+                            </ul>
+                            <ul>
+                                <li path="aboutIDE.html" class="sbmaction" id="m-ide"><span>Sobre</span><span></span></li>
+                            </ul>
+                        </div>
+                </span>
+                </div>
+            </div>
+            <div>
+                <span id="btnMin" class="h-btn min-form"></span>
+                <span id="btnMax" class="h-btn max-form"></span>
+                <span id="btnClose" class="h-btn close-form"></span>
+            </div>
+        </header>
+        <main>
+            <section class="side-nav">
+                <nav>
+                    <span class="sep-nav"></span>
+                    <div class="side-btn" >Projecto</div>
+                    <div class="side-btn">Ferramentas</div>
+                </nav>
+                <div class="side-nav-container">
+                    <div>
+                        <span>
+                            <input type="file" id="fileInput" webkitdirectory directory multiple hidden>
+                            <article id="OpenProject"><img src="../lib/ui/src/ic_open_project.png"></article>
+                            <article><img src="../lib/ui/src/ic_new_file.png"></article>
+                            <article><img src="../lib/ui/src/ic_new_folder.png"></article> 
+                            <article><img src="../lib/ui/src/ic_refresh.png"></article>
+                        </span>
+                        <span><img src="../lib/ui/src/ic_hide_pane.png"></span>
+                    </div>
+                    <div class="nav-slide">
+                        <div>
+                            <div id="directory_tree" exp="false">
+                                <div class="container-tree"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nav-area-item" exp="false">
+                                <div class="nav-area">
+                                    UI/UX DESIGN
+                                </div>
+                                <ul>
+                                    <strong>Separadores</strong>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <strong>Formulário</strong>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <strong>Média</strong>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                </ul>
+                            </div>
+                            <div class="nav-area-item" exp="true">
+                                <div class="nav-area">
+                                    Tags
+                                </div>
+                                <ul>
+                                    <strong>Separadores</strong>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <strong>Formulário</strong>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <strong>Média</strong>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                    <li>ola</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ed-file">
+                <section>
+                    <div id="activeProjectFile"></div>
+                    <div id="tagLife" class="hader-design"style="display: none; ">
+                        <div>
+                            <span id="selectSizeScreen" class="size-screen">Tamanho da tela</span>
+                        </div>
+                        <div>
+                            Iphone 6/6s "750X1334px"
+                        </div>
+                        <div class="zoom-area">
+                                <span id="zoomIn">
+                                    <img src="../lib/ui/src/icons8_Zoom_In_52px.png" alt="" class="zoom-img">
+                                </span>
+                                <span id="zoomOut">
+                                    <img src="../lib/ui/src/icons8_Zoom_Out_52px.png" alt="" class="zoom-img">
+                                </span>
+                        </div>
+                    </div>
+                </section>
+                <section class="mode-container">
+                    <ul class="interlisence" contenteditable="false"></ul>
+                    <!--<pre id="codearea" fileType="js" class="ed-code-area" contenteditable="true"></pre>-->
+                    <div class="mode table-container" id="textContainer">
+                        <!--<div class="line-gutter-backdrop"></div>
+                        <table>
+                            <tbody id="pInterface">
+                                <tr><td class="line-number" value="1"></td><td contenteditable="true" class="line-content">text</td></tr>
+                            </tbody>
+                        </table>
+                        <textarea id="pInterface"></textarea>-->
+
+                    </div>
+                    <div class="mode design-container">
+                        <div>
+                            <div class="design-view">
+                                <style>
+                                    #outer-dropzone {
+                                    height: 140px;
+                                    }
+
+                                    #inner-dropzone {
+                                    height: 80px;
+                                    }
+
+                                    .dropzone {
+                                    background-color: #ccc;
+                                    border: dashed 4px transparent;
+                                    border-radius: 4px;
+                                    margin: 10px auto 30px;
+                                    padding: 10px;
+                                    width: 80%;
+                                    transition: background-color 0.3s;
+                                    }
+
+                                    .drop-active {
+                                    border-color: #aaa;
+                                    }
+
+                                    .drop-target {
+                                    background-color: #29e;
+                                    border-color: #fff;
+                                    border-style: solid;
+                                    }
+
+                                    .drag-drop {
+                                    display: inline-block;
+                                    min-width: 40px;
+                                    padding: 2em 0.5em;
+
+                                    color: #fff;
+                                    background-color: #29e;
+                                    border: solid 2px #fff;
+
+                                    touch-action: none;
+                                    -webkit-transform: translate(0px, 0px);
+                                            transform: translate(0px, 0px);
+
+                                    transition: background-color 0.3s;
+                                    }
+
+                                    .drag-drop.can-drop {
+                                    color: #000;
+                                    background-color: #4e4;
+                                    }
+                                </style>
+                                <div class="mobile-activity workspaceDesign" style="width: 750px;height: 1334px; zoom: 37%;">
+                                    <div class="column is-inline-block live-demo__result">
+                                        <div id="no-drop" class="draggable drag-drop"> #no-drop
+                                        </div>
+                                    
+                                        <div id="yes-drop" class="draggable drag-drop" ">Dragged out</div>
+                                    
+                                        <div id="outer-dropzone" class="dropzone">
+                                            #outer-dropzone
+                                            <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sep-button">
+                                <img src="../lib/ui/src/icons8_Plus_50px.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mode-shoose">
+                    <div class="mode-shoose-down"><span><img src="../lib/ui/src/ic_code.png">Código</span><span><img src="../lib/ui/src/ic_design.png">Design</span></div>
+                </section>
+            </section>
+            <section class="preview">
+                <div>
+                    <div class="data">
+                        <img src="../lib/ui/src/icons8_Database_Administrator_100px_3.png" alt="">
+                        <button class="btn-inline" style="margin: 1rem 0;">
+                            Nova fonte de dados
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="hashname">.classe#id</div>
+                    <div>
+                        <div class="input-selector">
+                            <label>align-content</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>align-items</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>align-self</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>all</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>animation</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>animation-delay</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>animation-direction</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>animation-duration</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>animation-fill-mode</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>animation-iteration-count</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>animation-name</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>animation-play-state</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>align-content</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>animation-timing-function</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>backface-visibility</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-attachment</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-blend-mode</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-clip</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-color</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-image</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-origin</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-position</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-position-x</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-position-y</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-repeat</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-repeat-x</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-repeat-y</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>background-size</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>baseline-shift</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border-bottom</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border-bottom-color</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border-bottom-left-radius</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border-bottom-right-radius</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border-bottom-style</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border-bottom-width</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border-collapse</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border-color</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border-image</label><input type="text" name="#" id="#">
+                        </div>
+                        <div class="input-selector">
+                            <label>border-image-outset</label><input type="text" name="#" id="#">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <div class="warn-error-view">
+                    ola muno
+                </div>
+                <span><span><img src="../lib/ui/src/ic_error.png" alt="error"><span>2</span></span>
+                <span><img src="../lib/ui/src/ic_warn.png" alt="warn"><span>0</span></span></span>
+            </div>
+            <div><span id="opStart"><img src="../lib/ui/src/loader/loading_small-2x3.gif"> Inicializando configurações</span></div>
+            <div><span>CRLF</span><span id="lang_selected">HTML</span></div>
+        </footer>
+    </section>
+    <script src="../lib/class/Data_Manager.js"></script>
+    <script src="../lib/class/Form.js"></script>
+    <script src="../lib/class/IDE.js"></script>
+    <script src="../lib/class/Main.js"></script>
+    <script src="../lib/class/jquery-3.3.1.min.js"></script>
+    <script src="../lib/class/BuildApk.js"></script>
+    <script src="../../../node_modules/interactjs/dist/interact.js"></script>
+    <script>
+         /* The dragging code for '.draggable' from the demo above
+    * applies to this demo as well so it doesn't have to be repeated. */
+
+            // enable draggables to be dropped into this
+            interact('.dropzone').dropzone({
+                // only accept elements matching this CSS selector
+                accept: '#yes-drop',
+                // Require a 75% element overlap for a drop to be possible
+                overlap: 0.75,
+
+                // listen for drop related events:
+
+                ondropactivate: function (event) {
+                    // add active dropzone feedback
+                    event.target.classList.add('drop-active')
+                },
+                ondragenter: function (event) {
+                    var draggableElement = event.relatedTarget
+                    var dropzoneElement = event.target
+
+                    // feedback the possibility of a drop
+                    dropzoneElement.classList.add('drop-target')
+                    draggableElement.classList.add('can-drop')
+                    draggableElement.textContent = 'Dragged in'
+                },
+                ondragleave: function (event) {
+                    // remove the drop feedback style
+                    event.target.classList.remove('drop-target')
+                    event.relatedTarget.classList.remove('can-drop')
+                    event.relatedTarget.textContent = 'Dragged out'
+                },
+                ondrop: function (event) {
+                    event.relatedTarget.textContent = 'Dropped'
+                },
+                ondropdeactivate: function (event) {
+                    // remove active dropzone feedback
+                    event.target.classList.remove('drop-active')
+                    event.target.classList.remove('drop-target')
+                }
+            })
+
+
+            interact('.drag-drop')
+                .draggable({
+                    inertia: true,
+                    modifiers: [
+                        interact.modifiers.restrictRect({
+                            restriction: 'parent',
+                            endOnly: true
+                        })
+                    ],
+                    autoScroll: true,
+                    // dragMoveListener from the dragging demo above
+                    listeners: { move: dragMoveListener }
+                })
+                function dragMoveListener(event) {
+                    var target = event.target,
+                    x=(parseFloat(target.getAttribute('data-x')) ||0)+event.dx,
+                    y = (parseFloat(target.getAttribute('data-y')) || 0)+event.dy;
+
+                    target.style.webkitTransform =
+                    target.style.transform='translate('+x*3+'px, '+y*3+'px)';
+
+                    target.setAttribute('data-x',x);
+                    target.setAttribute('data-y',y);
+                }
+                window.dragMoveListener = dragMoveListener;
+    </script>
+</body>
+</html>

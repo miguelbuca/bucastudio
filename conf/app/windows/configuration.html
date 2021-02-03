@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/ui/configuration.css">
+    <link rel="stylesheet" href="../lib/ui/formUI.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>Configuração</div>
+            <div>
+                <div id="btnMin" class="h-btn min-form" enable="false"></div>
+                <div id="btnMax" class="h-btn max-form"  enable="false"></div>
+                <div id="btnClose" class="h-btn close-form"></div>
+            </div>
+        </header>
+        <main>
+           <section id="android">
+               <h1>Android</h1>
+               <div>
+                <input type="file" id="fileInput" webkitdirectory directory multiple hidden>
+                <button class="btn-rd-100" id="SDK_DIRECTORY">Android SDK</button>
+                <span id="sdk_path"> ( Nenhum directório foi selecionado )</span>
+               </div>
+               <div>ola mundo</div>
+           </section>
+           <section id="aparencia">
+               <h1>Aparencia</h1>
+           </section>
+           <section id="editor">
+               <h1>Editor</h1>
+           </section>
+           <section id="API">
+               <h1>API</h1>
+           </section>
+        </main>
+    </div>
+    <script src="../lib/class/Data_Manager.js"></script>
+    <script src="../lib/class/Form.js"></script>
+    <script src="../lib/class/IDE.js"></script>
+    <script src="../lib/class/Configuration.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "BUCASTUDIO",
+  "version": "1.0.0",
+  "description": "IDE para desenvolvimento de aplicações híbridas com android",
+  "main": "conf/app/lib/ini.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "BUCASTUDIO",
+  "license": "ISC",
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "directory-tree": "^2.2.4",
+    "electron-tree-view": "^1.1.0",
+    "file-system": "^2.2.2",
+    "interactjs": "^1.9.8",
+    "js-treeview": "^1.1.5",
+    "lokijs": "^1.5.8",
+    "node-dir": "^0.1.17",
+    "path": "^0.12.7",
+    "readline": "^1.3.0"
+  },
+  "dependencies": {
+    "read-file-utf8": "^1.1.2"
+  }
+}

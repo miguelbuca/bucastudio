@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/ui/terminal.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>Terminal</div>
+            <div>
+                <div id="btnMin" class="h-btn min-form" enable="false"></div>
+                <div id="btnMax" class="h-btn max-form"  enable="false"></div>
+                <div id="btnClose" class="h-btn close-form"></div>
+            </div>
+        </header>
+        <main>
+            <section>
+               <div id="terminalArea">
+                   <section>
+                        <span class="app-name"></span> <article>$</article><input id="terminalInput" type="text">
+                   </section>
+               </div>
+            </section>
+            <section>
+                <div><img src="../lib/ui/src/ic_trash_24px.png"></div>
+                <div id="terminalOut"></div>
+            </section>
+        </main>
+    </div>
+    <script src="../lib/class/Form.js"></script>
+    <script src="../lib/class/terminal.js"></script>
+</body>
+</html>

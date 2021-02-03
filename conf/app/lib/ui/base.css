@@ -1,0 +1,48 @@
+*,
+::after,
+::before{
+    padding: 0;
+    margin: 0;
+    color: #cccccc;
+    font-family: Segoe WPC,Segoe UI,sans-serif;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    font-size: 13px;
+}
+
+@font-face{
+    src: url(./font/BOOMBOX.TTF);
+    font-family: 'BOOMBOX';
+}
+@font-face{
+    src: url(./font/Billabong.ttf);
+    font-family: 'Billabong';
+}
+
+/*** Não possibilita arrastar imagem ***/
+img{
+    user-drag: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+
+/*scroll Bar*/
+::-webkit-scrollbar{
+	width: 5px;
+    height: 0.5px;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment{
+    display: none;
+}
+::-webkit-scrollbar-track-piece{
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:vertical{
+    background: transparent;
+    -webkit-border-radius: 100px;
+    background: #006594;
+}

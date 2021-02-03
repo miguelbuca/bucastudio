@@ -1,0 +1,133 @@
+@import './base.css';
+:root{
+    --blue-color : #006594;
+    --white-color : #fff;
+    --black-color : #000;
+}
+.container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container>header{
+    padding: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-bottom: solid rgba(0, 0, 0, .1) 0.5px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.container>header>div:first-child{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.container>header>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    color: var(--blue-color);
+}
+.container>header>div .h-btn{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right:14px;
+}
+.container>header>div .h-btn:last-child{
+    margin-right:0;
+}
+.close-form{
+    background: black;
+}
+.max-form{
+    background: white;
+}
+.min-form{
+    background: #006594;
+}
+main{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    color: var(--blue-color);
+}
+main>section:first-child .app-name{
+    padding: 8px 0;
+    margin-right: 4px;
+    color: var(--blue-color);
+}
+main>section:first-child article{
+    color: orange;
+    padding: 8px 0;
+}
+main>section:first-child{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    overflow-y: auto;
+}
+main>section:first-child>div:first-child{
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+main>section:first-child>div:first-child section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+main>section:first-child input{
+    flex-grow: 1;
+    padding: 8px 0;
+    margin-left: 4px;
+    background: transparent;
+    border: none;
+}
+main>section:last-child{
+    display: flex;
+    flex-direction: column;
+    background: #2e2e2e;
+}
+main>section:last-child>div{
+    padding: 14px;
+}
+main>section:last-child>div:first-child{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, .1);
+}
+main>section:last-child>div:first-child img{
+    height: 25px;
+    width: 25px;
+    margin-right: 4px;
+}
+main>section:last-child>div:first-child img:last-child{
+    margin: 0;
+}
+main>section:last-child>div:last-child{
+    height: 200px;
+    overflow: auto;
+}
+main>section:last-child>div:last-child small{
+    font-size: 11pt;
+    color: rgba(255, 255, 255, .5);
+}

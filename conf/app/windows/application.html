@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/ui/application.css">
+    <link rel="stylesheet" href="../lib/ui/formUI.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>Aplicação</div>
+            <div>
+                <div id="btnMin" class="h-btn min-form" enable="false"></div>
+                <div id="btnMax" class="h-btn max-form"  enable="false"></div>
+                <div id="btnClose" class="h-btn close-form"></div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="tab" code="Base">Base</div>
+                <div class="tab" code="Permições">Permições</div>
+                <div class="tab" code="Recursos da aplicação">Recursos da aplicação</div>
+            </section>
+            <section>
+                <div class="tab-view">
+                    <div>
+                        <input type="text" placeholder="Nome da aplicação"> <span>.ex: angolaApp</span>
+                    </div>
+                    <div>
+                        <select>
+                            <optgroup label="Tela">
+                                <option value="Normal" selected>Normal</option>
+                                <option value="Sem barra de titulo">Sem barra de titulo</option>
+                                <option value="Sem barra de navegação">Sem barra de acção</option>
+                                <option value="Tela cheia">Tela cheia</option>
+                            </optgroup>
+                        </select>
+                        <span>Definições de Tela</span>
+                    </div>
+                    <div>
+                        <input type="file" id="file" hidden> 
+                        <button class="btn-icon" onclick="file.click();">Selecionar imagem</button>
+                        <span> Icon para aplicação</span>
+                    </div>
+                    <div>
+                        <img src="../lib/ui/src/logo.png" class="display-app-logo">
+                    </div>
+                    <div>
+                        <select>
+                            <optgroup label="Orientação da aplicação">
+                                <option value="Vertical" selected>Vertical</option>
+                                <option value="Horizontal">Horizontal</option>
+                            </optgroup>
+                        </select>
+                        <span> Modo de apresentação</span>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>Cores da aplicação</legend>
+                            <div><input type="color" id="a" value="#ffffff"><span>Primária</span></div>
+                            <div><input type="color" id="b" value="#f5f5f5"><span>Primária ( escuro )</span></div>
+                            <div><input type="color" id="c" value="#006594"><span>Base</span></div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="tab-view">
+                    <div>
+                            <div>
+                                    <small>Minhas permições</small>
+                                </div>
+                                <ul>
+                                    <li><span>INTERNET</span><button>&minus;</button></li>
+                                    <li><span>ACCESS_NETWORK_STATE</span><button>&minus;</button></li>
+                                    <li><span>ACCESS_WIFI_STATE</span><button>&minus;</button></li>
+                                    <li><span>READ_EXTERNAL_STORAGE</span><button>&minus;</button></li>
+                                    <li><span>WRITE_EXTERNAL_STORAGE</span><button>&minus;</button></li>
+                                    <li><span>CALL_PHONE</span><button>&minus;</button></li>
+                                    <li><span>VIBRATE</span><button>&minus;</button></li>
+                                </ul>
+                    </div>
+                    <div>
+                        <div>
+                            <small>Permições do android</small>
+                        </div>
+                        <ul>
+                            <li><span>Câmera</span><button>&plus;</button></li>
+                            <li><span>Câmera</span><button>&plus;</button></li>
+                            <li><span>Câmera</span><button>&plus;</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-view">
+                        <div>
+                                <div>
+                                        <small>Recursos activos</small>
+                                    </div>
+                                    <ul>
+                                        <li><span>INTERNET</span><button>&minus;</button></li>
+                                        <li><span>ACCESS_NETWORK_STATE</span><button>&minus;</button></li>
+                                        <li><span>ACCESS_WIFI_STATE</span><button>&minus;</button></li>
+                                        <li><span>READ_EXTERNAL_STORAGE</span><button>&minus;</button></li>
+                                        <li><span>WRITE_EXTERNAL_STORAGE</span><button>&minus;</button></li>
+                                        <li><span>CALL_PHONE</span><button>&minus;</button></li>
+                                        <li><span>VIBRATE</span><button>&minus;</button></li>
+                                    </ul>
+                        </div>
+                        <div>
+                            <div>
+                                <small>Todos os Recursos</small>
+                            </div>
+                            <ul>
+                                <li><span>Câmera</span><button>&plus;</button></li>
+                                <li><span>Câmera</span><button>&plus;</button></li>
+                                <li><span>Câmera</span><button>&plus;</button></li>
+                            </ul>
+                        </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../lib/class/Form.js"></script>
+    <script src="../lib/class/application.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+pre .str, code .str { color: #e6db74; } /* string */
+pre .kwd, code .kwd { color: #ff0080; } /* keyword */
+pre .com, code .com { color: #75715e; } /* comment */
+pre .typ, code .typ { color: #a6e22e;text-decoration: underline;text-underline-position: under; } /* type */
+pre .lit, code .lit { color: #ae81ff } /* literal */
+pre .pun, code .pun { color: #f8f8f2; } /* punctuation */
+pre .pln, code .pln { color: #f8f8f2; } /* plaintext */
+pre .dec, code .dec { color: #22c0c4; } /* decimal */
+
+
+
+pre.prettyprint, code.prettyprint {
+	background-color: #434343;
+	font-family: Consolas,"Courier New",monospace;
+	font-weight: normal;
+	font-size: 14px;
+	font-feature-settings: "liga"0,"calt"0;
+	line-height: 19px;
+	letter-spacing: 0px;
+}
+
+@media (prefers-color-scheme: dark) {
+
+	pre .tag, code .tag { color: #FFF; } /* HTML tag */
+	pre .atn, code .atn { color: #a6e22e; } /* HTML attribute name */
+	pre .atv, code .atv { color: #cd9731; } /* HTML attribute value */
+	pre .str, code .str { color: #BB55FF; } /* string */
+	pre .com, code .com { color: #75715e; } /* comment */
+	pre .lit, code .lit { color: #ff3399; } /* literal */
+	pre .pln, code .pln { color: #f8f8f2; } /* plaintext */
+
+	pre.prettyprint, code.prettyprint {
+		background-color: #434343;
+	}
+
+}
